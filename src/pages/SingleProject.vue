@@ -39,6 +39,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
+                    prova prova prova
                     <h6>{{ project.title }}</h6>
                 </div>
             </div>
