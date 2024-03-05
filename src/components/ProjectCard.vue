@@ -33,15 +33,17 @@ export default {
 
 <template lang="">
     <div class="col-3 my-3">
-        <div class="card">
-            <img :src="getUrlImage()" class="card-img-top">
-            <div class="card-body">
-                <h6>{{ project.title }}</h6>
+        <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+            <div class="card">
+                <img :src="getUrlImage()" class="card-img-top">
+                <div class="card-body">
+                    <h6>{{ project.title }}</h6>
+                </div>
+                <p class="px-2">
+                    {{ createExcerpt() }}
+                </p>
             </div>
-            <p class="px-2">
-                {{ createExcerpt() }}
-            </p>
-        </div>
+        </router-link>
     </div>
 </template>
 

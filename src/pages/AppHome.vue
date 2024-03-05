@@ -1,12 +1,12 @@
 <script>
-import SingleProject from '../components/SingleProject.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 import { store } from '../store.js';
 import axios from 'axios';
 
 export default {
     name: 'Home',
     components: {
-        SingleProject
+        ProjectCard
     },
     data(){
         return {
@@ -41,7 +41,7 @@ export default {
             <h3>I miei progetti</h3>
         </div>
         <div class="row">
-            <SingleProject v-for="project, index in projects" :key="index" :project="project" />
+            <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
         </div>
         <div class="text-center my-3">
             <button :class="currentPage == 1 ? 'disabled' : ''" class="btn btn-dark btn-sm btn-square me-3" @click="getProjects(currentPage - 1)">
@@ -56,4 +56,4 @@ export default {
 
 <style lang="scss">
 @use '../styles/general.scss';
-</style>./SingleProject.vue/index.js
+</style>./SingleProject.vue/index.js../components/ProjectCard.vue/index.js
