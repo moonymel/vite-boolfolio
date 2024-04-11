@@ -1,5 +1,218 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$dark_bg: #161513;
+$light_bg: #1d1c1a;
+$my_pink: #FF6B65;
+$my_orange: #FE9A51;
+$my_purple: #C26BD6;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// GLOBALI
+
+body {
+    color: white;
+    background-color: $dark_bg;
+    font-family: 'Montserrat';
+}
 
 a {
     text-decoration: none;
+}
+
+.my-title {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 80px 0px;
+
+    .my-subtitle {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: normal;
+
+        .my-sub-line {
+            width: 180px;
+            height: 3px;
+            background: linear-gradient(90deg, $my_orange 0%, $my_pink 50%, $my_purple 100%);
+        }
+    }
+
+
+}
+
+// BUTTONS
+.button-pink {
+    --c: #FF6B65;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.1em solid var(--c);
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: $dark_bg;
+
+    span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: var(--c);
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: black;
+
+        span {
+            transform: translateY(0) scale(2);
+        }
+
+        span:nth-child(1) {
+            --n: 1;
+        }
+
+        span:nth-child(2) {
+            --n: 2;
+        }
+
+        span:nth-child(3) {
+            --n: 3;
+        }
+
+        span:nth-child(4) {
+            --n: 4;
+        }
+    }
+
+}
+
+.button-orange {
+    --c: #FE9A51;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.1em solid var(--c);
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 0;
+    background-color: $dark_bg;
+
+    span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: var(--c);
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: black;
+
+        span {
+            transform: translateY(0) scale(2);
+        }
+
+        span:nth-child(1) {
+            --n: 1;
+        }
+
+        span:nth-child(2) {
+            --n: 2;
+        }
+
+        span:nth-child(3) {
+            --n: 3;
+        }
+
+        span:nth-child(4) {
+            --n: 4;
+        }
+    }
+
+}
+
+.button-purple {
+    --c: #C26BD6;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.1em solid var(--c);
+    border-radius: 0.5em;
+    padding: 0.2em 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 0;
+    background-color: $dark_bg;
+
+    span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: var(--c);
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: black;
+
+        span {
+            transform: translateY(0) scale(2);
+        }
+
+        span:nth-child(1) {
+            --n: 1;
+        }
+
+        span:nth-child(2) {
+            --n: 2;
+        }
+
+        span:nth-child(3) {
+            --n: 3;
+        }
+
+        span:nth-child(4) {
+            --n: 4;
+        }
+    }
+
 }

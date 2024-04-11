@@ -37,11 +37,14 @@ export default {
 <template lang="">
     <div>
         <div class="container">
-            <div class="row">
+            <div class="row" v-if="success == true">
                 <div class="col-12 text-center">
                     prova prova prova
                     <h6>{{ project.title }}</h6>
                 </div>
+            </div>
+            <div class="row" v-else>
+
             </div>
         </div>
     </div>

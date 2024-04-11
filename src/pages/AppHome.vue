@@ -8,7 +8,7 @@ export default {
     components: {
         ProjectCard
     },
-    data(){
+    data() {
         return {
             store,
             projects: [],
@@ -16,11 +16,11 @@ export default {
             lastPage: null,
         }
     },
-    created(){
+    created() {
         this.getProjects();
     },
     methods: {
-        getProjects(page_number){
+        getProjects(page_number) {
             axios.get(`${this.store.baseUrl}/api/projects`, {
                 params: {
                     page: page_number
@@ -36,24 +36,50 @@ export default {
 </script>
 
 <template lang="">
-    <div class="container my-4">
-        <div class="text-center my-3">
-            <h3>I miei progetti</h3>
-        </div>
-        <div class="row">
-            <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
-        </div>
-        <div class="text-center my-3">
-            <button :class="currentPage == 1 ? 'disabled' : ''" class="btn btn-dark btn-sm btn-square me-3" @click="getProjects(currentPage - 1)">
-                <
-            </button>
-            <button :class="currentPage == lastPage ? 'disabled' : ''" class="btn btn-dark btn-sm btn-square" @click="getProjects(currentPage + 1)">
-                >
-            </button>
+    <div class="container">
+        <div class="jumbotron d-flex my-5">
+            <div class="col-12 align-self-center">
+                <div class="j-title">
+                    Welcome!
+                </div>
+                <div class="j-sub">
+                    this is boolfolio, <br>
+                    a web app for your online portfolio.
+                </div>
+                <div class="my-3">
+                    <div class="button-purple d-inline-block mx-2">
+                        link1
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="button-pink d-inline-block mx-2">
+                        link2
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="button-orange d-inline-block mx-2">
+                        link3
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss">
-@use '../styles/general.scss';
+@use '../styles/general.scss' as *;
+
+.jumbotron {
+    height: 500px;
+
+    .j-title {
+        font-size: 55px;
+        font-weight: bold;
+    }
+
+    .j-sub {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
 </style>./SingleProject.vue/index.js../components/ProjectCard.vue/index.js
