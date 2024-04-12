@@ -32,15 +32,23 @@ export default {
 </script>
 
 <template lang="">
+
+    <!-- CARD  -->
     <div class="col-3 mb-3">
         <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
             <div class="my-card rounded-3">
+
+                <!-- IMMAGINE  -->
                 <figure class="snip1554">
                     <img :src="getUrlImage()">
+
+                    <!-- TITOLO PROGETTO  -->
                     <figcaption>
                         <h3>{{ project.title }}</h3>
                     </figcaption>
+
                 </figure>
+                
             </div>
         </router-link>
     </div>
