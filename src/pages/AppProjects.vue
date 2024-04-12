@@ -97,11 +97,11 @@ export default {
 
         <!-- BOTTONI NAVIGAZIONE -->
         <div class="text-center my-3">
-            <button :class="currentPage == 1 ? 'button-purple disabled' : ''" class="button-orange me-3"  @click="selectedTechnologyId ? getProjectsByTechnology(selectedTechnologyId, currentPage - 1) : getProjects(currentPage - 1)"">
+            <button :class="currentPage == 1 ? 'button-purple disabled' : ''" class="button-orange me-3" @click="selectedTechnologyId == null ? getProjects(currentPage - 1) : getProjectsByTechnology(1, currentPage - 1)" :disabled="currentPage == 1">
                 <
                 <span></span><span></span><span></span><span></span>
             </button>
-            <button :class="currentPage == lastPage ? 'button-purple disabled' : ''" class="button-orange"  @click="selectedTechnologyId ? getProjectsByTechnology(selectedTechnologyId, currentPage + 1) : getProjects(currentPage + 1)"">
+            <button :class="currentPage == lastPage ? 'button-purple disabled' : ''" class="button-orange" @click="selectedTechnologyId == null ? getProjects(currentPage + 1) : getProjectsByTechnology(1, currentPage + 1)" :disabled="currentPage == lastPage">
                 >
                 <span></span><span></span><span></span><span></span>
             </button>
