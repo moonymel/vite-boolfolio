@@ -83,7 +83,32 @@ export default {
         </div>
 
         <!-- LABELS TECHNOLOGIES  -->
-        <button @click="getProjectsByTechnology(1, 1)">Tecnologia 1</button>
+        <div class="col-12 text-end mb-3">
+            <button class="label-orange mx-2" @click="getProjectsByTechnology(1, 1)">
+                HTML
+                <span></span><span></span><span></span><span></span>
+            </button>
+            <button class="label-pink mx-2" @click="getProjectsByTechnology(2, 1)">
+                CSS
+                <span></span><span></span><span></span><span></span>
+            </button>
+            <button class="label-purple mx-2" @click="getProjectsByTechnology(3, 1)">
+                JavaScript
+                <span></span><span></span><span></span><span></span>
+            </button>
+            <button class="label-orange mx-2" @click="getProjectsByTechnology(4, 1)">
+                Vue.js
+                <span></span><span></span><span></span><span></span>
+            </button>
+            <button class="label-pink mx-2" @click="getProjectsByTechnology(5, 1)">
+                PHP
+                <span></span><span></span><span></span><span></span>
+            </button>
+            <button class="label-purple mx-2" @click="getProjectsByTechnology(6, 1)">
+                Laravel
+                <span></span><span></span><span></span><span></span>
+            </button>
+        </div>
 
 
         <!-- CONTAINER PRINCIPALE -->
